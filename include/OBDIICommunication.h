@@ -1,8 +1,17 @@
 #ifndef __OBDII_COMMUNICATION_H
 #define __OBDII_COMMUNICATION_H
 
+#include "obdii_internal_hdr.h"
+
+BEGIN_C_DECL2
+
 #include "OBDII.h"
+#ifdef _WIN32
+#include <stdint.h>
+typedef uint32_t	canid_t;
+#else
 #include <linux/can.h>
+#endif
 
 /** Opaque structure representing an OBDII socket */
 typedef struct {
@@ -76,5 +85,7 @@ OBDIIResponse OBDIIPerformQuery(OBDIISocket *s, OBDIICommand *command);
  *     OBDIICommandSetFree(&commands);
  */
 OBDIICommandSet OBDIIGetSupportedCommands(OBDIISocket *s);
+
+END_C_DECL2
 
 #endif /* OBDIICommunication.h */

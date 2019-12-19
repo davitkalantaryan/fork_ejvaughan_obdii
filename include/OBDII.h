@@ -6,6 +6,8 @@
 
 #define VARIABLE_RESPONSE_LENGTH 0
 
+BEGIN_C_DECL2
+
 struct OBDIICommand; // Forward declaration
 
 /**
@@ -265,5 +267,7 @@ int OBDIICommandSetContainsCommand(OBDIICommandSet *commandSet, OBDIICommand *co
  * \param commandSet A pointer to the command set whose resources should be freed.
  */
 void OBDIICommandSetFree(OBDIICommandSet *commandSet);
+
+END_C_DECL2
 
 #endif /* OBDII.h */
