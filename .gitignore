@@ -2,3 +2,23 @@ build/
 .*.swp
 *.pyc
 *.log
+
+# started from here added by DK
+*.[oa]
+*~
+*.obj
+*.pro.user*
+.tmp/*
+*.dll
+
+prj/*/*/*
+!prj/*/*_vs/*.sln
+!prj/*/*_vs/*.vcxproj
+!prj/*/*_vs/*.vcxproj.filters
+
+
+# In the case if the project is not executable
+# better to keep *.user file also
+# because all debug information is stored there
+
+!prj/tests/simple_obdii_test_vs/simple_obdii_test.vcxproj.user
