@@ -36,6 +36,7 @@ int OBDIICommandSetContainsCommand(OBDIICommandSet *commandSet, OBDIICommand *co
 	return 0;
 }
 
+
 int OBDIIResponseSuccessful(OBDIICommand *command, unsigned char *payload, int len)
 {
 	if (!command || !payload || len <= 0) {

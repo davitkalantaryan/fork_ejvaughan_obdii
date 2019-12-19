@@ -1,5 +1,7 @@
-#ifndef __OBDII_H
-#define __OBDII_H
+#ifndef OBDII_H
+#define OBDII_H
+
+#include "obdii_internal_hdr.h"
 #include <stdint.h>
 
 #define OBDII_API_VERSION 1

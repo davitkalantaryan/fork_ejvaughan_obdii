@@ -1,5 +1,5 @@
-#ifndef __OBDII_COMMUNICATION_H
-#define __OBDII_COMMUNICATION_H
+#ifndef OBDII_COMMUNICATION_H
+#define OBDII_COMMUNICATION_H
 
 #include "obdii_internal_hdr.h"
 

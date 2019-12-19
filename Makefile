@@ -7,14 +7,14 @@ CC = gcc
 #remove @ for no make command prints
 DEBUG=@
 
-LIBRARY_INCLUDE_DIRS = -I src
-LIBRARY_SRC_FILES=src/OBDII.c src/OBDIICommunication.c
+LIBRARY_INCLUDE_DIRS = -I include
+LIBRARY_SRC_FILES=src/core/OBDII.c src/core/OBDIICommunication.c
 
-DAEMON_SRC_FILES = src/OBDIIDaemon.c
-DAEMON_INCLUDE_DIRS = -I src
+DAEMON_SRC_FILES = src/core/OBDIIDaemon.c
+DAEMON_INCLUDE_DIRS = -I include
 
-CLI_DIR = src
-CLI_INCLUDE_DIRS += -I $(CLI_DIR)
+CLI_DIR = src/core
+CLI_INCLUDE_DIRS += -I include
 CLI_SRC_FILES=$(LIBRARY_SRC_FILES)
 
 BUILD_DIR = build
